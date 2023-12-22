@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://dtxubks6o8une"]
+
+[ext_resource type="Script" path="res://scenes/win.gd" id="1_mtf7l"]
+[ext_resource type="Texture2D" uid="uid://cdkjlbwuq6w0d" path="res://assets/level/background.png" id="1_nb4e8"]
+[ext_resource type="FontFile" uid="uid://bvprhv3lki1kr" path="res://assets/font/ofont.ru_Avatar.ttf" id="2_fmigw"]
+
+[node name="Win" type="Node2D"]
+script = ExtResource("1_mtf7l")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("1_nb4e8")
+
+[node name="Label" type="Label" parent="Background"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1282.0
+offset_top = -648.5
+offset_right = -638.0
+offset_bottom = -431.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_fmigw")
+theme_override_font_sizes/font_size = 150
+text = "You  won!"

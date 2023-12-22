@@ -1,0 +1,435 @@
+[gd_scene load_steps=34 format=3 uid="uid://c54vvhqu52ex5"]
+
+[ext_resource type="Texture2D" uid="uid://bkranasvpeqmt" path="res://assets/level/base1.png" id="1_3vb6i"]
+[ext_resource type="Script" path="res://scenes/level.gd" id="1_e6oxe"]
+[ext_resource type="PackedScene" uid="uid://ctt8h2i6ik5s4" path="res://scenes/characters/Player/player.tscn" id="2_opiq4"]
+[ext_resource type="PackedScene" uid="uid://cbn0w3klujc3g" path="res://scenes/characters/Enemies/Fighter.tscn" id="3_7pk0o"]
+[ext_resource type="Texture2D" uid="uid://cdkjlbwuq6w0d" path="res://assets/level/background.png" id="3_c12c8"]
+[ext_resource type="Texture2D" uid="uid://bny4odryn0q5w" path="res://assets/UI/health.png" id="5_gb0d2"]
+[ext_resource type="Texture2D" uid="uid://wkdaihnuc683" path="res://assets/level/dungeon.png" id="7_ac3d0"]
+[ext_resource type="Texture2D" uid="uid://b47p1ggt5gk0l" path="res://assets/UI/sword.png" id="8_2tklv"]
+[ext_resource type="Texture2D" uid="uid://oumgrb48qeeq" path="res://assets/Build/berrybush2.png" id="8_v5r8t"]
+[ext_resource type="Texture2D" uid="uid://c207f8uby4txr" path="res://assets/Build/bush.png" id="9_r8cht"]
+[ext_resource type="Texture2D" uid="uid://cftmkl1fln0kw" path="res://assets/Build/bush2.png" id="10_mongb"]
+[ext_resource type="Texture2D" uid="uid://b5sl8cgde1ee4" path="res://assets/Build/berrybush.png" id="11_8hmb3"]
+[ext_resource type="Texture2D" uid="uid://cjlq4lbvyn00p" path="res://assets/UI/key.png" id="13_eyiw5"]
+[ext_resource type="FontFile" uid="uid://bvprhv3lki1kr" path="res://assets/font/ofont.ru_Avatar.ttf" id="13_x5op2"]
+[ext_resource type="PackedScene" uid="uid://cbyiiqeq805dd" path="res://scenes/elements/door.tscn" id="14_pk2dk"]
+[ext_resource type="Texture2D" uid="uid://ddqb7xjmvxbpv" path="res://assets/UI/ruby.png" id="16_bn08c"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fxepo"]
+radius = 173.298
+height = 909.853
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_34puc"]
+radius = 271.007
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gqodb"]
+radius = 216.0
+height = 914.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hy5u0"]
+size = Vector2(10, 2182)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t2ux8"]
+size = Vector2(3855, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xaxns"]
+size = Vector2(4, 2301)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_46k6x"]
+size = Vector2(4001, 68)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oi7qq"]
+size = Vector2(3851, 31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j0v6g"]
+size = Vector2(34, 2255)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o5ae2"]
+size = Vector2(19, 1135.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vjudl"]
+size = Vector2(1965, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_78lyr"]
+size = Vector2(1943, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ucm6"]
+size = Vector2(273, 28.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x7dng"]
+size = Vector2(153, 19.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q2yre"]
+size = Vector2(120, 132)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jpsyn"]
+size = Vector2(107.5, 224)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oaixv"]
+size = Vector2(121, 139)
+
+[node name="Level" type="Node2D"]
+position = Vector2(16, 24)
+script = ExtResource("1_e6oxe")
+
+[node name="Base1" type="Sprite2D" parent="."]
+position = Vector2(944, 516)
+texture = ExtResource("1_3vb6i")
+
+[node name="Base2" type="Sprite2D" parent="."]
+position = Vector2(2864, 516)
+texture = ExtResource("3_c12c8")
+
+[node name="Base3" type="Sprite2D" parent="."]
+position = Vector2(2864, 1596)
+texture = ExtResource("1_3vb6i")
+
+[node name="Base4" type="Sprite2D" parent="."]
+position = Vector2(944, 1596)
+texture = ExtResource("3_c12c8")
+
+[node name="Dungeon" type="Sprite2D" parent="."]
+position = Vector2(4784, 516)
+texture = ExtResource("7_ac3d0")
+
+[node name="Decoration" type="Node2D" parent="."]
+
+[node name="Bush" type="Sprite2D" parent="Decoration"]
+position = Vector2(1346, 93)
+scale = Vector2(2.63, 2.63)
+texture = ExtResource("9_r8cht")
+
+[node name="Bush2" type="Sprite2D" parent="Decoration"]
+position = Vector2(1712, 307)
+scale = Vector2(2.415, 2.415)
+texture = ExtResource("10_mongb")
+
+[node name="Berrybush" type="Sprite2D" parent="Decoration"]
+position = Vector2(1617, 50)
+scale = Vector2(1.975, 1.975)
+texture = ExtResource("11_8hmb3")
+
+[node name="Berrybish2" type="Sprite2D" parent="Decoration"]
+position = Vector2(1438, 195)
+scale = Vector2(2.03, 2.03)
+texture = ExtResource("8_v5r8t")
+
+[node name="Bush3" type="Sprite2D" parent="Decoration"]
+position = Vector2(1737, 81)
+scale = Vector2(2.295, 2.295)
+texture = ExtResource("10_mongb")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Decoration"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/StaticBody2D"]
+position = Vector2(1539, 169)
+rotation = 2.056
+shape = SubResource("CapsuleShape2D_fxepo")
+
+[node name="Decoration2" type="Node2D" parent="."]
+position = Vector2(-865, 553)
+
+[node name="Bush" type="Sprite2D" parent="Decoration2"]
+position = Vector2(1252, 335)
+scale = Vector2(2.63, 2.63)
+texture = ExtResource("9_r8cht")
+
+[node name="Bush2" type="Sprite2D" parent="Decoration2"]
+position = Vector2(944, 161)
+scale = Vector2(2.415, 2.415)
+texture = ExtResource("10_mongb")
+
+[node name="Berrybush" type="Sprite2D" parent="Decoration2"]
+position = Vector2(1494, 369)
+scale = Vector2(1.975, 1.975)
+texture = ExtResource("11_8hmb3")
+
+[node name="Berrybish2" type="Sprite2D" parent="Decoration2"]
+position = Vector2(1241, 217)
+scale = Vector2(2.03, 2.03)
+texture = ExtResource("8_v5r8t")
+
+[node name="Bush3" type="Sprite2D" parent="Decoration2"]
+position = Vector2(949, 359)
+scale = Vector2(2.295, 2.295)
+texture = ExtResource("10_mongb")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Decoration2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration2/StaticBody2D"]
+position = Vector2(1202, 212)
+rotation = 2.056
+shape = SubResource("CapsuleShape2D_fxepo")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Decoration2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration2/StaticBody2D2"]
+position = Vector2(2759, 507)
+shape = SubResource("CircleShape2D_34puc")
+
+[node name="Bush" type="Sprite2D" parent="Decoration2/StaticBody2D2"]
+position = Vector2(2768, 510)
+scale = Vector2(3.6225, 3.6225)
+texture = ExtResource("9_r8cht")
+
+[node name="Decoration3" type="Node2D" parent="."]
+
+[node name="Bush2" type="Sprite2D" parent="Decoration3"]
+position = Vector2(54.9999, 1148)
+scale = Vector2(2.26, 2.26)
+texture = ExtResource("10_mongb")
+
+[node name="Bush" type="Sprite2D" parent="Decoration3"]
+position = Vector2(169, 1320)
+scale = Vector2(2.68, 2.68)
+texture = ExtResource("9_r8cht")
+
+[node name="Berrybush" type="Sprite2D" parent="Decoration3"]
+position = Vector2(72, 1462)
+scale = Vector2(1.95, 1.95)
+texture = ExtResource("11_8hmb3")
+
+[node name="Berrybush2" type="Sprite2D" parent="Decoration3"]
+position = Vector2(461, 1168)
+scale = Vector2(2.92, 2.92)
+texture = ExtResource("8_v5r8t")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Decoration3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration3/StaticBody2D"]
+position = Vector2(303, 1239)
+rotation = 0.958186
+shape = SubResource("CapsuleShape2D_gqodb")
+
+[node name="Decoration4" type="Node2D" parent="."]
+position = Vector2(1854, -1092)
+
+[node name="Bush2" type="Sprite2D" parent="Decoration4"]
+position = Vector2(54.9999, 1148)
+scale = Vector2(2.26, 2.26)
+texture = ExtResource("10_mongb")
+
+[node name="Bush" type="Sprite2D" parent="Decoration4"]
+position = Vector2(169, 1320)
+scale = Vector2(2.68, 2.68)
+texture = ExtResource("9_r8cht")
+
+[node name="Berrybush" type="Sprite2D" parent="Decoration4"]
+position = Vector2(72, 1462)
+scale = Vector2(1.95, 1.95)
+texture = ExtResource("11_8hmb3")
+
+[node name="Berrybush2" type="Sprite2D" parent="Decoration4"]
+position = Vector2(461, 1168)
+scale = Vector2(2.92, 2.92)
+texture = ExtResource("8_v5r8t")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Decoration4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration4/StaticBody2D"]
+position = Vector2(303, 1239)
+rotation = 0.958186
+shape = SubResource("CapsuleShape2D_gqodb")
+
+[node name="Door" type="Node2D" parent="."]
+
+[node name="Panel" type="Panel" parent="Door"]
+offset_left = 2143.0
+offset_top = 1784.0
+offset_right = 2543.0
+offset_bottom = 2133.0
+
+[node name="Door" parent="Door" instance=ExtResource("14_pk2dk")]
+position = Vector2(2350, 1958)
+
+[node name="Player" type="Node2D" parent="."]
+position = Vector2(-16, -24)
+
+[node name="Player" parent="Player" instance=ExtResource("2_opiq4")]
+position = Vector2(855, 547)
+
+[node name="Enemies" type="Node2D" parent="."]
+position = Vector2(-16, -24)
+
+[node name="Samurai" parent="Enemies" instance=ExtResource("3_7pk0o")]
+position = Vector2(3121, 236)
+
+[node name="Samurai2" parent="Enemies" instance=ExtResource("3_7pk0o")]
+position = Vector2(770, 1800)
+
+[node name="Samurai3" parent="Enemies" instance=ExtResource("3_7pk0o")]
+position = Vector2(3377, 1831)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Health1" type="Sprite2D" parent="UI"]
+position = Vector2(85, 79)
+texture = ExtResource("5_gb0d2")
+
+[node name="Health2" type="Sprite2D" parent="UI"]
+position = Vector2(165, 79)
+texture = ExtResource("5_gb0d2")
+
+[node name="Health3" type="Sprite2D" parent="UI"]
+position = Vector2(245, 79)
+texture = ExtResource("5_gb0d2")
+
+[node name="HasSword" type="Sprite2D" parent="UI"]
+visible = false
+position = Vector2(362, 79)
+scale = Vector2(2.5625, 2.5625)
+texture = ExtResource("8_2tklv")
+
+[node name="HasKey" type="Sprite2D" parent="UI"]
+visible = false
+position = Vector2(461, 83)
+texture = ExtResource("13_eyiw5")
+
+[node name="Message" type="Label" parent="UI"]
+visible = false
+offset_left = 618.0
+offset_top = 44.0
+offset_right = 845.0
+offset_bottom = 119.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("13_x5op2")
+theme_override_font_sizes/font_size = 50
+text = "ghjrsthsh"
+
+[node name="Background" type="Sprite2D" parent="UI"]
+visible = false
+position = Vector2(960, 540)
+texture = ExtResource("3_c12c8")
+
+[node name="Label" type="Label" parent="UI/Background"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -985.5
+offset_top = -553.0
+offset_right = -934.5
+offset_bottom = -527.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("13_x5op2")
+theme_override_font_sizes/font_size = 150
+text = "PAUSE"
+
+[node name="Wall" type="StaticBody2D" parent="."]
+position = Vector2(-16, -24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
+position = Vector2(-5, 1081)
+shape = SubResource("RectangleShape2D_hy5u0")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Wall"]
+position = Vector2(1917.5, -5)
+shape = SubResource("RectangleShape2D_t2ux8")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Wall"]
+position = Vector2(3842, 1105.5)
+shape = SubResource("RectangleShape2D_xaxns")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Wall"]
+position = Vector2(1949.5, 2194)
+shape = SubResource("RectangleShape2D_46k6x")
+
+[node name="Border" type="Area2D" parent="."]
+position = Vector2(-16, -24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border"]
+position = Vector2(1914.5, 1085.5)
+shape = SubResource("RectangleShape2D_oi7qq")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Border"]
+position = Vector2(1917, 1117.5)
+shape = SubResource("RectangleShape2D_j0v6g")
+
+[node name="DungeonBorder" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="DungeonBorder"]
+position = Vector2(5753.5, 513.25)
+shape = SubResource("RectangleShape2D_o5ae2")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="DungeonBorder"]
+position = Vector2(4805.5, -34)
+shape = SubResource("RectangleShape2D_vjudl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DungeonBorder"]
+position = Vector2(4796.5, 1066.5)
+shape = SubResource("RectangleShape2D_78lyr")
+
+[node name="Portal" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Portal"]
+position = Vector2(687.5, -10.25)
+shape = SubResource("RectangleShape2D_4ucm6")
+
+[node name="Panel" type="Panel" parent="Portal"]
+offset_left = 449.0
+offset_top = -24.0
+offset_right = 945.0
+offset_bottom = 249.0
+
+[node name="PortalFrom" type="Area2D" parent="."]
+
+[node name="Panel" type="Panel" parent="PortalFrom"]
+offset_left = 4622.0
+offset_top = 864.0
+offset_right = 4958.0
+offset_bottom = 1053.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PortalFrom"]
+position = Vector2(4794.5, 1045.75)
+shape = SubResource("RectangleShape2D_x7dng")
+
+[node name="SwordTaken" type="Area2D" parent="."]
+position = Vector2(0, 59)
+
+[node name="Sword" type="Sprite2D" parent="SwordTaken"]
+position = Vector2(4794.5, 392.5)
+scale = Vector2(3.40624, 3.40624)
+texture = ExtResource("8_2tklv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SwordTaken"]
+position = Vector2(4794.5, 392.5)
+shape = SubResource("RectangleShape2D_q2yre")
+
+[node name="KeyTaken" type="Area2D" parent="."]
+position = Vector2(1276, 256)
+
+[node name="Key" type="Sprite2D" parent="KeyTaken"]
+position = Vector2(2422.5, 1761)
+scale = Vector2(2.25, 2.25)
+texture = ExtResource("13_eyiw5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KeyTaken"]
+position = Vector2(2427, 1767)
+shape = SubResource("RectangleShape2D_jpsyn")
+
+[node name="RubyTaken" type="Area2D" parent="."]
+visible = false
+position = Vector2(0, 53)
+
+[node name="Ruby" type="Sprite2D" parent="RubyTaken"]
+position = Vector2(4797, 394)
+scale = Vector2(2.15909, 2.15909)
+texture = ExtResource("16_bn08c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RubyTaken"]
+position = Vector2(4792.5, 394.5)
+shape = SubResource("RectangleShape2D_oaixv")
+
+[connection signal="body_entered" from="Border" to="." method="_on_border_body_entered"]
+[connection signal="body_exited" from="Border" to="." method="_on_border_body_exited"]
+[connection signal="body_entered" from="Portal" to="." method="_on_portal_body_entered"]
+[connection signal="body_exited" from="Portal" to="." method="_on_portal_body_exited"]
+[connection signal="body_entered" from="PortalFrom" to="." method="_on_portal_from_body_entered"]
+[connection signal="body_exited" from="PortalFrom" to="." method="_on_portal_from_body_exited"]
+[connection signal="body_entered" from="SwordTaken" to="." method="_on_sword_taken_body_entered"]
+[connection signal="body_entered" from="KeyTaken" to="." method="_on_key_taken_body_entered"]
+[connection signal="body_entered" from="RubyTaken" to="." method="_on_ruby_taken_body_entered"]
